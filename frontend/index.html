@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Users API</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <div class="section">
+    <div class="label">ID (для деталки, PUT, PATCH, DELETE)</div>
+    <input id="userId" type="number" placeholder="например: 1">
+  </div>
+
+  <div class="section">
+    <div class="label">Username</div>
+    <input id="username" type="text" placeholder="alice">
+
+    <div class="label">Description</div>
+    <input id="description" type="text" placeholder="Frontend dev">
+  </div>
+
+  <div class="section">
+    <div class="label">Действия</div>
+    <div class="buttons">
+      <button id="btn-get-all">GET all</button>
+      <button id="btn-get-one">GET by id</button>
+      <button id="btn-post">POST</button>
+      <button id="btn-put">PUT</button>
+      <button id="btn-patch">PATCH</button>
+      <button id="btn-delete">DELETE</button>
+    </div>
+  </div>
+
+  <div id="output">
+    <div class="out-label">Response</div>
+    <div class="status" id="status"></div>
+    <pre id="result"></pre>
+  </div>
+  <div class="section">
+    <div class="label">Фильтр по description</div>
+    <div id="filters" class="filters"></div>
+  </div>
+
+  <div class="section">
+    <table id="usersTable" class="users-table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody id="usersBody">
+      <tr class="empty-row">
+        <td colspan="3">Нажмите GET all, чтобы загрузить пользователей</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="history">История
+    <button class="clear">очистить</button>
+    <div class="history-list"></div>
+  </div>
+
+  <p style="margin-top:40px"><a href="http://localhost:3000/api-docs" target="_blank" style="font-size: 16px;">Swagger UI</a></p>
+
+
+
+
+
+
+
+
+
+
+  <script src="../bundle.js"></script>
+
+</body>
+</html>
